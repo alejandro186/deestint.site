@@ -1,0 +1,189 @@
+:root {
+    --background: #060227;
+    --accent: #3407d6;
+    --background_1: #1a1464;
+    --accent_1: #043bb3;
+}
+
+body {
+    background-color: #5e5e5e;
+   
+    height: 33rem;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+html {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    font-size: large;
+}
+
+.header_1 {
+    justify-content: center;
+    text-align: center;
+    position: fixed;
+    content: sticky;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    align-items: center;
+         background: linear-gradient(
+         45deg,
+         var(--background) 0%,
+          color-mix(in srgb, var(--background_1) 97%, var(--accent_1)) 45%,
+          color-mix(in srgb, var(--background_1) 95%, var(--accent_1)) 50%,
+          color-mix(in srgb, var(--background_1) 97%, var(--accent_1)) 55%,
+          var(--background) 100%
+          );
+    
+    top: 0;
+    left: 0;
+    width: 100vw;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgb(0, 0, 0);
+}
+
+.header_1::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+        circle at 50% 0.5%,
+        color-mix(in srgb, var(--accent_1) 0%, transparent) 0%,
+        transparent 70%
+    );
+    pointer-events: none;
+    z-index: 0;
+}
+
+.soporte i{
+    font-size: 30px;
+    color: black;
+}
+
+.car_products i{
+    font-size: 30px;
+    color: black;
+}
+
+.title  i{
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+}
+
+.title a{
+    font-size: 30px;
+    color: black;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.presentation {
+    background-image:  linear-gradient(10deg, rgba(7, 7, 233, 0.164), #0000387c),
+                      url('./assets_lpb/presentacion.jpg');
+    background-size: cover;
+    background-position: center;
+    align-items: right;
+    padding-top: 70px;
+    justify-content: right;
+    display: flex;
+    width: auto;
+    height: 300px;
+    border-radius: 10px;
+    margin-left: -5px;
+    margin-right: -5px;
+    margin-top: 17%;
+}
+
+.presentation h1 {
+    font-size: 28px;
+    text-align: center;
+    color: rgb(9, 0, 32);
+    margin: auto;
+    line-height: 1.2;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.presentation p{
+    font-size: 15px;
+    display: flex;
+    text-align: center;
+    margin-left: 110px;
+    align-items: right;
+    font-family:'Times New Roman', Times, serif
+}
+
+.presentation button{
+    background-color: #01164467;
+    color: rgb(7, 2, 37);
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 50px;
+    margin-left: 60px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.presentation button:hover{
+    background-color: #100146;
+    color: rgb(153, 153, 153);
+    transition: 0.5s;
+}
+
+.tarjetas {
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 10px;
+    width: 100%;
+    height: 25px;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.tarjetas button{
+    font-size: 15px;
+    font-family:'Times New Roman', Times, serif;
+    border-radius: 10px;
+    box-shadow:rgb(0, 0, 0);
+     background: linear-gradient(
+         45deg,
+         var(--background) 0%,
+          color-mix(in srgb, var(--background_1) 37%, var(--accent_1)) 5%,
+          color-mix(in srgb, var(--background_1) 55%, var(--accent_1)) 50%,
+          color-mix(in srgb, var(--background_1)  47%, var(--accent_1)) 5%,
+          var(--background) 100%
+          );
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
+}
+
+.tarjetas button:hover {
+    color: #777;
+    background: color-mix(in srgb, #1c1138 47%, #1f1575 50%);
+    transition-duration: 0.6s;
+}
+
+.tarjetas .text {
+    font-size: 17px;
+
+}
+
+.tarjetas i{
+    font-size: 30px;
+    color: rgb(0, 2, 17);
+    object-fit: cover;
+    justify-content: center;
+    margin-top: 10px;
+}
+
