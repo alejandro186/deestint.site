@@ -199,7 +199,7 @@ html {
           color-mix(in srgb, var(--background_1) 50%, var(--accent_1)) 5%,
           var(--background) 100%
           );
-    margin-top: 85%;
+    margin-top: 65%;
     border-radius: 20px;
 }
 
