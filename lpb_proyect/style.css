@@ -7,18 +7,13 @@
 
 body {
     background-color: #5e5e5e;
-   
     height: 33rem;
     background-size: cover;
     background-position: center;
 }
 
-
-
-
 html {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     font-size: large;
 }
 
@@ -26,7 +21,7 @@ html {
     justify-content: center;
     text-align: center;
     position: fixed;
-    content: sticky;
+    height: 90px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 10px;
@@ -43,7 +38,7 @@ html {
     top: 0;
     left: 0;
     width: 100vw;
-    padding: 15px;
+    z-index: 100;
     box-shadow: 0 2px 4px rgb(0, 0, 0);
 }
 
@@ -104,8 +99,9 @@ html {
 }
 
 .presentation h1 {
-    font-size: 28px;
-    text-align: center;
+    font-size: 25px;
+    text-align: right;
+    padding-right: 25px;
     color: rgb(9, 0, 32);
     margin: auto;
     line-height: 1.2;
@@ -130,7 +126,7 @@ html {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 50px;
-    margin-left: 60px;
+    margin-left: 85px;
     font-family: 'Times New Roman', Times, serif;
 }
 
@@ -160,7 +156,7 @@ html {
          var(--background) 0%,
           color-mix(in srgb, var(--background_1) 37%, var(--accent_1)) 5%,
           color-mix(in srgb, var(--background_1) 55%, var(--accent_1)) 50%,
-          color-mix(in srgb, var(--background_1)  47%, var(--accent_1)) 5%,
+          color-mix(in srgb, var(--background_1) 57%, var(--accent_1)) 5%,
           var(--background) 100%
           );
     border: none;
@@ -185,5 +181,306 @@ html {
     object-fit: cover;
     justify-content: center;
     margin-top: 10px;
+}
+
+.seccion-dividida {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 190px;
+    margin-left: 20%;
+    margin-right: 50%; 
+        background: linear-gradient(
+         200deg,
+         var(--background) 0%,
+          color-mix(in srgb, var(--background_1) 1%, var(--accent_1)) 5%,
+          color-mix(in srgb, var(--background_1) 40%, var(--accent_1)) 50%,
+          color-mix(in srgb, var(--background_1) 50%, var(--accent_1)) 5%,
+          var(--background) 100%
+          );
+    margin-top: 85%;
+    border-radius: 20px;
+}
+
+.texto_seccion {
+    text-align: center;
+    font-size: 14px;
+    font-family:'Times New Roman', Times, serif;
+    color: rgb(0, 0, 0);
+}
+
+/* divisior de tacooos */
+.seccion-divisor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100px;
+    margin-left: 5%;
+    margin-right: 9%; 
+        background: linear-gradient(
+         200deg,
+         var(--background) 0%,
+          color-mix(in srgb, var(--background_1) 1%, var(--accent_1)) 5%,
+          color-mix(in srgb, var(--background_1) 40%, var(--accent_1)) 50%,
+          color-mix(in srgb, var(--background_1) 50%, var(--accent_1)) 5%,
+          var(--background) 100%
+          );
+    margin-top: 10%;
+    border-radius: 20px;
+}
+
+.texto_seccion_2 {
+    text-align: center;
+    font-size: 14px;
+    font-family:'Times New Roman', Times, serif;
+    color: rgb(0, 0, 0);
+}
+
+.seccion-divisor:hover {
+    color: #777;
+    background: color-mix(in srgb, #2a1138 47%, #2719a8 50%);
+    transition-duration: 0.3s;
+    border:rgb(0, 2, 17);
+}
+
+.seccion-divisor .texto_seccion_2:hover {
+    color: #0a021b;
+    transition-duration: 0.3s;
+}
+/* carta de producto */
+.container-products{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 3rem;
+    padding-left: 4rem;
+    padding-right: 2rem;
+}
+
+.card-product {
+    background-image: url(./assests_lpb/taco_producto.svg), linear-gradient(#ffffff00, #5f5c5c80);
+    background-color: #d0d3e9;
+    display: flex;
+    margin-top: 15px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center; 
+    position: relative;
+    border-radius: 2rem;
+    cursor: pointer;
+    width: 210px;
+    height: 240px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: repeat;
+    
+}
+
+
+.content-card-product {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    row-gap: 1px;;
+    justify-items: center;
+}
+
+.stars {
+    justify-self: center;
+    align-self: center;
+    grid-row: 1/2;
+    grid-column:1/-1;
+    margin-bottom: -20px;
+}
+
+.stars i{
+    font-size: 17px;
+    color: #14084b;
+}
+.stars:hover i {
+    color:#333235;
+    transition: all 0.2s ease;
+}
+
+.content-card-product h3{
+    grid-row: 2/3;
+    grid-column: 1/-1;
+    color: #222020;
+    font-weight: 600;
+    font-size: 25px;
+    margin-bottom: -23px;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.content-card-product h3:hover {
+    color: #080441;
+    transition: all 0.1s ease;
+}
+
+.add-cart {
+    justify-self: start;
+    border: 1px solid #504b4b;
+    padding: 0.7rem; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    margin-left: 10px;
+    height: 20px;
+}
+
+.add-cart:hover {
+    background-color: #6a65b1;
+    transform: scale(1.1);
+}
+
+
+.add-cart i {
+    color: #111010;
+    font-size: 1rem;
+}
+
+.content-card-product .price {
+    justify-self: center;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 570;
+    font-family: 'Times New Roman', Times, serif;
+    margin-right: 70px;
+    margin-top: 27px;
+}
+
+.container-products_2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 3rem;
+    padding-left: 4rem;
+    padding-right: 2rem;
+}
+
+.card-product_2 {
+    background-image: url(./assests_lpb/nachos.svg), linear-gradient(#ffffff00, #5f5c5c80);
+    background-color: #d0d3e9;
+    display: flex;
+    margin-top: 15px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center; 
+    position: relative;
+    border-radius: 2rem;
+    cursor: pointer;
+    width: 210px;
+    height: 240px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: repeat;
+}
+
+.container-products_3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 3rem;
+    padding-left: 4rem;
+    padding-right: 2rem;
+}
+
+.card-product_3 {
+    background-image: url(./assests_lpb/taco_producto_2.svg), linear-gradient(#ffffff00, #5f5c5c80);
+    background-color: #d0d3e9;
+    display: flex;
+    margin-top: 15px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center; 
+    position: relative;
+    border-radius: 2rem;
+    cursor: pointer;
+    width: 210px;
+    height: 240px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: repeat;
+}
+
+.container-products_4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 3rem;
+    padding-left: 4rem;
+    padding-right: 2rem;
+}
+
+.card-product_4 {
+    background-image: url(./assests_lpb/taco_producto_4.svg), linear-gradient(#ffffff00, #5f5c5c80);
+    background-color: #d0d3e9;
+    display: flex;
+    margin-top: 15px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center; 
+    position: relative;
+    border-radius: 2rem;
+    cursor: pointer;
+    width: 210px;
+    height: 240px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: repeat;
+}
+
+.container-products_5 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 3rem;
+    padding-left: 4rem;
+    padding-right: 2rem;
+}
+
+.card-product_5 {
+    background-image: url(./assests_lpb/taco_producto_5.svg), linear-gradient(#ffffff00, #5f5c5c80);
+    background-color: #d0d3e9;
+    display: flex;
+    margin-top: 15px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center; 
+    position: relative;
+    border-radius: 2rem;
+    cursor: pointer;
+    width: 210px;
+    height: 240px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: repeat;
+}
+
+.footer {
+    width: auto;
+    height: 90px;
+    left: 0;
+    background: #09033d;
+    color: rgb(78, 77, 77);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: -10px;
+    margin-right: -8px;
+}
+
+
+.footer .text_1{
+    text-align: center;
+    
+    
+}
+
+.footer a{
+    text-decoration: none;
+    color: #000000;
 }
 
