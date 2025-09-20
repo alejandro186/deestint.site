@@ -1,0 +1,242 @@
+/* Estilos generales del cuerpo */
+:root {
+    --dark-color: #000000;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #04142b; /* Un azul casi negro */
+}
+
+/* Estilos del encabezado principal */
+.main-header {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: radial-gradient(
+      ellipse at top,
+      transparent 0%,
+      var(--dark-color)
+    ),
+    radial-gradient(
+      ellipse at bottom,
+      var(--dark-color),
+      rgba(2, 30, 56, 0.151)
+    ),
+    repeating-linear-gradient(
+      220deg,
+      rgb(0, 0, 0) 0px,
+      rgb(0, 0, 0) 19px,
+      transparent 19px,
+      transparent 22px
+    ),
+    repeating-linear-gradient(
+      189deg,
+      rgb(0, 0, 0) 0px,
+      rgb(0, 0, 0) 19px,
+      transparent 19px,
+      transparent 22px
+    ),
+    repeating-linear-gradient(
+      148deg,
+      rgb(0, 0, 0) 0px,
+      rgb(0, 0, 0) 19px,
+      transparent 19px,
+      transparent 22px
+    ),
+    linear-gradient(90deg, rgb(0, 68, 255), rgb(192, 169, 169));
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-header h1 {
+    font-size: 30px;
+    color: #7f8097;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.main-header::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(24, 41, 87, 0.5), rgba(42, 82, 190, 0) 70%);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+/* Estilos del mini encabezado de navegación */
+.mini-header {
+    background-color: #020007; /* Negro para un fuerte contraste */
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.mini-header ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    
+}
+
+.mini-header a {
+    color: #4d4f50; /* Un azul claro para el texto */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 17px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.mini-header a:hover {
+    border-radius: 20px;
+    background-color: #071220;
+    color: #97979c;
+}
+
+/* Estilos de las secciones */
+section {
+    padding: 20px 20px;
+    min-height: 400px;
+}
+
+#seccion1 {
+    background-color: #00081d;
+}
+
+#seccion2 {
+    background-color: #011327;
+}
+
+#seccion3 {
+    background-color: #011927;
+}
+
+#seccion4 {
+    background-color: #012035d2;
+}
+
+section h2 {
+    font-size: 3.5rem;
+    color: #4c4c4e;
+    text-shadow: 8px 8px 4px rgba(0, 0, 0, 0.596);
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    border-bottom: 2px solid #1b3c5a;
+    padding-bottom: 1px;
+}
+
+section p{
+    font-size: 18px;
+    font-family:'Times New Roman', Times, serif;
+    color: #4c4c4e;
+    text-shadow: 8px 8px 4px rgba(0, 0, 0, 0.596);
+}
+
+.music p{
+    text-align: center;
+    font-size: 20px;
+}
+
+.main-footer{
+    height: 180px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-image: radial-gradient(
+      ellipse at top,
+      transparent 0%,
+      var(--dark-color)
+    ),
+    radial-gradient(
+      ellipse at bottom,
+      var(--dark-color),
+      rgba(2, 30, 56, 0.151)
+    ),
+    repeating-linear-gradient(
+      220deg,
+      rgb(0, 0, 0) 0px,
+      rgb(0, 0, 0) 19px,
+      transparent 19px,
+      transparent 22px
+    ),
+    repeating-linear-gradient(
+      189deg,
+      rgb(0, 0, 0) 0px,
+      rgb(0, 0, 0) 19px,
+      transparent 19px,
+      transparent 22px
+    ),
+    repeating-linear-gradient(
+      148deg,
+      rgb(0, 0, 0) 0px,
+      rgb(0, 0, 0) 19px,
+      transparent 19px,
+      transparent 22px
+    ),
+    linear-gradient(90deg, rgb(0, 68, 255), rgb(192, 169, 169));
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-footer h1 {
+    font-size: 25px;
+    color: #7f8097;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.main-footer::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(24, 41, 87, 0.5), rgba(42, 82, 190, 0) 70%);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.main-footer p{
+    font-size: 15px;
+    font-family:'Times New Roman', Times, serif;
+    color: #828283;
+    text-shadow: 8px 8px 4px rgba(0, 0, 0, 0.596);
+    margin-top: auto;
+}
+
+.main-footer a{
+    color: #104763; /* Un azul claro para el texto */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 17px;
+    padding: 3px 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
