@@ -48,6 +48,7 @@ body{
     -ms-border-radius: 80px;
     -o-border-radius: 80px;
     font-family: cursive;
+    font-size: 15px;
 }
 
 .botones a:hover{
