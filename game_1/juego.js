@@ -16,6 +16,6 @@ function destapar(id){
     console.log(tarjetas_destapadas);
     if (tarjetas_destapadas == 1){
         tarjeta_1 = document.getElementById(id);
-        tarjeta_1.innerHTML = 'hola';
+        tarjeta_1.innerHTML = numeros[id];
     }
 }
