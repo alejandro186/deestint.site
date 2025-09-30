@@ -6,20 +6,48 @@ let primer_resultado = null;
 let segundo_resultado = null;
 let movimientos = 0;
 let aciertos = 0;
-let tiempo = 0;
+let temporizador = false;
+let timer = 90;
+let tiempo_regresivo = null;
+let timer_inicial = timer;
 
 let mostrar_movimientos = document.getElementById('movimientos');
 let mostrar_aciertos = document.getElementById('aciertos');
 let mostrar_tiempo = document.getElementById('tiempo'); 
 // numeros aleatorios
 
-let numeros = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,13,13,14,14,15,15,16,16,17,17,18,18];
+let numeros = [0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,13,13,14,14,15,15,16,16,17,17];
 numeros = numeros.sort(() => {return Math.random() -0.5});
 console.log(numeros);
+
+// funcion dos
+
+function contar_tiempo(){
+    tiempo_regresivo = setInterval(()=>{
+        timer--;
+        mostrar_tiempo.innerHTML = `tiempo: ${timer} segundos`;
+        if (timer == 0){
+            clearInterval(tiempo_regresivo);
+            bloquear_tarjetas();
+        }
+    },1000);
+}
+
+function bloquear_tarjetas(){
+    for(let i = 0; i <= 15; i++){
+        let tarjeta_bloqueada = document.getElementById(i);
+        tarjeta_bloqueada.innerHTML = numeros[i];
+        tarjeta_bloqueada.disabled = true;
+    } 
+}
 
 // funcion principal
 
 function destapar(id){
+    if(temporizador == false){
+        contar_tiempo();
+        temporizador = true;
+    }
     tarjetas_destapadas++;
     console.log(tarjetas_destapadas);
     if (tarjetas_destapadas == 1){
@@ -48,6 +76,21 @@ function destapar(id){
             // aumentar aciertos
             aciertos++;
             mostrar_aciertos.innerHTML = `aciertos: ${aciertos}`;
+        
+        if(aciertos == 18){
+            clearInterval(tiempo_regresivo);
+            mostrar_aciertos.innerHTML = `aciertos: ${aciertos} 😱`;
+            mostrar_tiempo.innerHTML = `tiempo: ${timer_inicial - timer} segundos 🎉`;
+            mostrar_movimientos.innerHTML = `movimientos: ${movimientos} 😱`;
+        }
+    } else {
+            setTimeout(()=>{
+                tarjeta_1.innerHTML = ' ';
+                tarjeta_2.innerHTML = ' ';
+                tarjeta_1.disabled = false;
+                tarjeta_2.disabled = false;
+                tarjetas_destapadas = 0;
+            },800);
         }
     }
 }
