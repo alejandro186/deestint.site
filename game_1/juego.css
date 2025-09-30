@@ -21,12 +21,15 @@ h1{
 button {
     height: 70px;
     width: 60px;
-    font-size: 20px;
+    font-size: 35px;
+    font-size: 'times new roman', Times, serif;
     border-radius: 5px;
     border: none;
+    color: #f3730a77;
 }
 button:hover {
     cursor: pointer;
+    background-color: #d3d3d377;
 }
 .s2 {
     background-color: rgba(255,255,255,0.2);
