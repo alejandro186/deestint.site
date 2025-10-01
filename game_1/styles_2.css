@@ -93,13 +93,13 @@ h2 span:nth-child(13) { animation-delay: 1.3s;}
     text-align: center;
 }
 .botones a:hover{
-    background-color: rgb(243, 114, 8);
+    background-color: #0C6A7A;
     transition: .3s;
     color: #f8f7f7;
 }
 
 .botones a:focus{
-    background-color: rgb(211, 127, 59);
+    background-color: #0C6A7A;
 }
 
 footer{
