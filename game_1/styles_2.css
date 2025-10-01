@@ -80,7 +80,6 @@ h2 span:nth-child(13) { animation-delay: 1.3s;}
 
 .botones a {
     background-color: #2F82E0;
-    border: #cc7006 solid 0.8px;
     padding: 10px 20px;      /* Más espacio interno */
     border-radius: 80px;
     font-family: 'times new roman', sans-serif;
