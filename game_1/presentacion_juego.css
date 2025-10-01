@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex; /* Centra el contenido */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+   background: #0d7874;
+background: radial-gradient(circle, rgba(13, 120, 116, 1) 0%, rgba(12, 106, 122, 1) 43%, rgba(25, 59, 97, 1) 100%);
+}
+
+.video-container {
+    width: 90%; /* Establece el ancho deseado: 60% de la pantalla */
+    max-width: 1000px; /* Opcional: Limita el tamaño máximo en pantallas muy grandes */
+    margin: 20px auto;
+    /* Usa padding-bottom para mantener la proporción 16:9 al cambiar de tamaño (responsivo) */
+    position: relative;
+    padding-bottom: 33.75%; /* 60% de ancho * (9/16) para mantener 16:9. Si usas 56.25% de padding-bottom y un ancho de 100%, obtienes 16:9 */
+    height: 150px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.video-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+        /* Estilos para el video de YouTube (iframe) */
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+ h1 {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    font-family: 'cursive';
+    color:rgb(2, 16, 19);
+    font-size: 55px;
+    top: 20px;
+    margin-top: -20px;
+}
+
+.boton_de_juego{
+    display: flex;
+    margin-top: 30px;
+    border: none;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    background-color: rgb(57, 88, 141);
+    padding: 2px 4px;
+    cursor: pointer;
+    font-family: 'cursive';
+}
+
+.boton_de_juego:hover{
+    background-color: rgb(57, 88, 141);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+.boton_de_juego a{
+    text-decoration: none;
+    color: #222121;
+    font-size: 30px;
+    background-color:rgb(57, 88, 141);
+    border-radius: 20px;
+    padding: 10px 20px;
+}
