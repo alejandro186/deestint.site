@@ -1,0 +1,112 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background: #0c4a47;
+    background: radial-gradient(circle, rgba(12, 74, 71, 1) 0%, rgba(10, 58, 66, 1) 43%, rgba(13, 38, 64, 1) 100%);
+}
+
+h1 {
+    color: #b8b8b8;
+    text-align: center;
+}
+
+/* Estilos de la tabla */
+.table-container {
+    overflow-x: auto; /* Permite desplazamiento si la tabla es muy ancha */
+}
+
+#logic-grid {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #bebebe;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos de encabezados (th) y celdas (td) */
+#logic-grid th, #logic-grid td {
+    border: 0.2px solid #7a7979;
+    padding: 10px;
+    text-align: center;
+    min-width: 100px; /* Ancho mínimo para las columnas */
+    height: 40px;
+}
+
+/* Encabezados de columna (CASA 1, CASA 2, etc.) */
+#logic-grid thead th {
+    background-color: #0c4a47;
+    color: white;
+    font-weight: bold;
+}
+
+/* Encabezados de fila (CATEGORÍAS) */
+#logic-grid tbody tr td:first-child {
+    background-color: #7d807f;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Celdas interactivas */
+.grid-cell {
+    cursor: pointer;
+    user-select: none; /* Previene la selección de texto al hacer clic */
+    font-size: 25px;
+    color: rgb(3, 2, 58); /* Color de la 'X' */
+    transition: background-color 0.1s;
+}
+
+.grid-cell:hover {
+    background-color: #f0f0f0;
+}
+
+/* Estilos para la sección de configuración de elementos */
+#element-config {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border: 1px solid #5f5e5e;
+    background-color: #a7a7a7;
+    margin-top: 20px;
+}
+
+#element-config label {
+    font-weight: bold;
+}
+
+#element-config input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#element-config button {
+    padding: 10px 15px;
+    background-color: #246934;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#element-config button:hover {
+    background-color: #218838;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+footer a{
+    text-decoration: none;
+    color: #495e9977;
+    font-weight: bold;
+}
+
+footer p{
+    color: #919090;
+}
