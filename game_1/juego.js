@@ -16,7 +16,7 @@ let mostrar_aciertos = document.getElementById('aciertos');
 let mostrar_tiempo = document.getElementById('tiempo'); 
 // numeros aleatorios
 
-let numeros = [0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,13,13,14,14,15,15,16,16,17,17];
+let numeros = [0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11];
 numeros = numeros.sort(() => {return Math.random() -0.5});
 console.log(numeros);
 
@@ -36,7 +36,7 @@ function contar_tiempo(){
 function bloquear_tarjetas(){
     for(let i = 0; i <= 15; i++){
         let tarjeta_bloqueada = document.getElementById(i);
-        tarjeta_bloqueada.innerHTML = numeros[i];
+        tarjeta_bloqueada.innerHTML = `<img src="./img_juegoo/${numeros[i]}.png" alt="img">`;
         tarjeta_bloqueada.disabled = true;
     } 
 }
@@ -53,7 +53,7 @@ function destapar(id){
     if (tarjetas_destapadas == 1){
         tarjeta_1 = document.getElementById(id);
         primer_resultado = numeros[id];
-        tarjeta_1.innerHTML = primer_resultado;
+        tarjeta_1.innerHTML = `<img src="./img_juegoo/${primer_resultado}.png" alt="img">`;
 
         // deshabilitar
         tarjeta_1.disabled = true;
@@ -61,7 +61,7 @@ function destapar(id){
     else if(tarjetas_destapadas == 2){
         tarjeta_2 = document.getElementById(id);
         segundo_resultado = numeros[id];
-        tarjeta_2.innerHTML = segundo_resultado;
+        tarjeta_2.innerHTML = `<img src="./img_juegoo/${segundo_resultado}.png" alt="img">`;
 
         // deshabilitar
         tarjeta_2.disabled = true;
