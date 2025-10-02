@@ -1,6 +1,6 @@
 body {
-    background: #e37f22;
-    background: radial-gradient(circle, rgba(227, 127, 34, 1) 0%, rgba(245, 194, 83, 1) 100%);
+    background: #0d7874;
+    background: radial-gradient(circle, rgba(13, 120, 116, 1) 0%, rgba(12, 106, 122, 1) 43%, rgba(25, 59, 97, 1) 100%);
     font-family: cursive; 
     color: white;
 }
@@ -25,7 +25,7 @@ button {
     font-size: 'times new roman', Times, serif;
     border-radius: 5px;
     border: none;
-    color: #f3730a77;
+    color: #0a1af377;
 }
 button:hover {
     cursor: pointer;
@@ -34,16 +34,20 @@ button:hover {
 .s2 {
     background-color: rgba(255,255,255,0.2);
     width: 250px;
-    height: 400px;
+    height: 350px;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     padding: 0 20px;
 }
 .estadisticas {
-    height: 105px;
+    height: 85px;
     border-radius: 8px;
     padding: 8px 20px;
 }
+img {
+    width: 80%
+}
+
 footer {
     text-align: center;
     margin-top: 20px;
