@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>acertijo einsten</title>
+    <link rel="stylesheet" href="juego_2.css">
+</head>
+<body>
+    <h1>Cuadrícula Lógica Interactiva</h1>
+
+    <div class="table-container">
+        <table id="logic-grid">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>CASA 1</th>
+                    <th>CASA 2</th>
+                    <th>CASA 3</th>
+                    <th>CASA 4</th>
+                    <th>CASA 5</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>COLOR DE PARED</td></tr>
+                <tr><td>NACIONALIDAD</td></tr>
+                <tr><td>CIGARRO</td></tr>
+                <tr><td>BEBIDA</td></tr>
+                <tr><td>ANIMAL</td></tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <hr>
+    <h2>Configuración</h2>
+
+    <div id="element-config">
+        <label for="houses">Casas:</label>
+        <input type="text" id="houses" value="1,2,3,4,5">
+
+        <label for="wall-colors">Colores de Pared:</label>
+        <input type="text" id="wall-colors" value="rojo,verde,azul,amarillo,blanco">
+        
+        <label for="nationalities">Nacionalidades:</label>
+        <input type="text" id="nationalities" value="noruego,britanico,danes,alemán,sueco">
+
+        <label for="cigars">Cigarros:</label>
+        <input type="text" id="cigars" value="dunhill,pall mall,prince,blends,blue master">
+
+        <label for="beverages">Bebidas:</label>
+        <input type="text" id="beverages" value="leche,agua,cafe,te,cerveza">
+
+        <label for="animals">Animales:</label>
+        <input type="text" id="animals" value="perro,pez,caballo,gato,pajaro">
+
+        <button onclick="generateGrid()">Generar Cuadrícula</button>
+    </div>
+<footer>
+    <p> Desarrollated by <a href="www.deestint.site"> DEESTINT </a></p>
+</footer>
+    <script src="juego_2.js"></script>
+</body>
+</html>
