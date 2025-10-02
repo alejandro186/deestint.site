@@ -5,8 +5,8 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-   background: #0d7874;
-background: radial-gradient(circle, rgba(13, 120, 116, 1) 0%, rgba(12, 106, 122, 1) 43%, rgba(25, 59, 97, 1) 100%);
+    background: #0d7874;
+    background: radial-gradient(circle, rgba(13, 120, 116, 1) 0%, rgba(12, 106, 122, 1) 43%, rgba(25, 59, 97, 1) 100%);
 }
 
 .video-container {
@@ -18,9 +18,9 @@ background: radial-gradient(circle, rgba(13, 120, 116, 1) 0%, rgba(12, 106, 122,
     padding-bottom: 33.75%; /* 60% de ancho * (9/16) para mantener 16:9. Si usas 56.25% de padding-bottom y un ancho de 100%, obtienes 16:9 */
     height: 150px;
     overflow: hidden;
+    margin-top: 90px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
 .video-section {
     display: flex;
     flex-direction: column;
@@ -35,6 +35,7 @@ background: radial-gradient(circle, rgba(13, 120, 116, 1) 0%, rgba(12, 106, 122,
     width: 100%;
     height: 100%;
     border: none;
+    border-radius: 10px;
 }
 
  h1 {
@@ -45,7 +46,7 @@ background: radial-gradient(circle, rgba(13, 120, 116, 1) 0%, rgba(12, 106, 122,
     color:rgb(2, 16, 19);
     font-size: 55px;
     top: 20px;
-    margin-top: -20px;
+    margin-top: 0.5px;
 }
 
 .boton_de_juego{
@@ -72,4 +73,19 @@ background: radial-gradient(circle, rgba(13, 120, 116, 1) 0%, rgba(12, 106, 122,
     background-color:rgb(57, 88, 141);
     border-radius: 20px;
     padding: 10px 20px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+footer a{
+    text-decoration: none;
+    color: #020f3377;
+    font-weight: bold;
+}
+
+footer p{
+    color: #141414;
 }
