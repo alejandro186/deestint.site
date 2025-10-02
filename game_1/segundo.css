@@ -1,77 +1,186 @@
 body {
-    font-family: Arial, sans-serif;
+    background: #032752;
+    background: radial-gradient(circle, rgba(3, 39, 82, 1) 0%, rgba(37, 37, 84, 1) 54%, rgba(39, 44, 46, 1) 100%);
     margin: 0;
-    display: flex; /* Centra el contenido */
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: flex;
+}
+.main-header {
+    height: 150px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background: #0d7874;
-    background: radial-gradient(circle, rgba(13, 120, 116, 1) 0%, rgba(12, 106, 122, 1) 43%, rgba(25, 59, 97, 1) 100%);
-}
-
-.video-container {
-    width: 90%; /* Establece el ancho deseado: 60% de la pantalla */
-    max-width: 1000px; /* Opcional: Limita el tamaño máximo en pantallas muy grandes */
-    margin: 20px auto;
-    /* Usa padding-bottom para mantener la proporción 16:9 al cambiar de tamaño (responsivo) */
+    text-align: center;
+    background-color: #292929;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     position: relative;
-    padding-bottom: 33.75%; /* 60% de ancho * (9/16) para mantener 16:9. Si usas 56.25% de padding-bottom y un ancho de 100%, obtienes 16:9 */
-    height: 150px;
     overflow: hidden;
-    margin-top: 90px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.main-header h1 {
+    font-size: 45px;
+    color: #b8b8b8;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    text-shadow: 2px 8px 9px rgba(0, 0, 5, 0.5);
+    z-index: 2;
 }
 
-.video-section {
+.main-header::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(86, 89, 97, 0.5), rgba(42, 82, 190, 0) 70%);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+/* Estilos del mini encabezado de navegación */
+.mini-header {
+    background-color: #1f1e1e; /* Negro para un fuerte contraste */
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.mini-header ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+.mini-header a {
+    color: #4d4f50; /* Un azul claro para el texto */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 10px 17px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.mini-header a:hover {
+    border-radius: 20px;
+    background-color: #071220;
+    color: #97979c;
+}
+section h1{
+    text-align: center;
+    font-size: 35px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #7a7777;
+}
+section p, li{
+    text-align: center;
+    font-size: 19px;
+    color: #6e6b6b;
+}
+
+.button-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width :100%;
+}
+button{
+    border: none;
+    border-radius: 20px;
+    background-color: #1f1e1e;
+    width: 150px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+button a{
+    color: #777b7c;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+.image-content{
+    width: 100%; 
+    border-radius: 10%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-content img {
+    width: 300px; 
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    border-radius: 50px;
+    height: auto;
+}
+
+.image{
+    width: 100%;
+}
+
+
+.main-footer{
+    height: 130px;
+    display: flex;
+    justify-content: flex-end;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-}
-        /* Estilos para el video de YouTube (iframe) */
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-radius: 10px;
-}
-
- h1 {
     text-align: center;
-    width: 100%;
+    background-color: #292929;
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-footer h1 {
+    font-size: 40px;
+    color: #c4c4c4;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.main-footer::before {
+    content: '';
     position: absolute;
-    font-family: 'cursive';
-    color:rgb(2, 16, 19);
-    font-size: 55px;
-    top: 20px;
-    margin-top: 0.5px;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(86, 89, 97, 0.5), rgba(42, 82, 190, 0) 70%);
+    transform: translate(-50%, -50%);
+    z-index: 1;
 }
 
-.boton_de_juego{
-    display: flex;
-    margin-top: 30px;
-    border: none;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 20px;
-    background-color: rgb(57, 88, 141);
-    padding: 2px 4px;
-    cursor: pointer;
-    font-family: 'cursive';
+.main-footer p{
+    font-size: 15px;
+    font-family:'Times New Roman', Times, serif;
+    color: #828283;
+    text-shadow: 8px 8px 4px rgba(0, 0, 0, 0.596);
+    margin-top: auto;
 }
 
-.boton_de_juego:hover{
-    background-color: rgb(57, 88, 141);
-    transform: scale(1.05);
-    transition: all 0.3s ease;
-}
-.boton_de_juego a{
+.main-footer a{
+    color: #515455; /* Un azul claro para el texto */
     text-decoration: none;
-    color: #222121;
-    font-size: 30px;
-    background-color:rgb(57, 88, 141);
-    border-radius: 20px;
-    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 17px;
+    padding: 3px 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
 }
