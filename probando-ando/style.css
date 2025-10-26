@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+SAS:wght@100..400&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} :root {
+    /* primera paleta */
+    --color-1: #EDE7E3;
+    --color-2: #a89a85;
+    --color-3: #7D5E2A;
+    --color-4: #2F180C;
+    /* segunda paleta */
+    --color-5: #E6E6FA;
+    --color-6: #A87CA0;
+    --color-7: #5E286D;
+    --color-8: #2A0E3C;
+    /* tercera paleta */
+    --color-9: #FAF3E0;
+    --color-10: #c07c56;
+    --color-11: #6F4E37;
+    --color-12: #3B2F2F;
+} body{
+    height: 100vh;
+    overflow:hidden;
+    background-color: var(--color-3);
+} header{
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}.navbar{
+    background:transparent;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+} .importante_1{
+    font-weight: 700;
+    width: 400px;
+    letter-spacing: 1px;
+    display: flex;
+    font-size: 12px;
+} .importante_1 h1{
+    font-weight: 300;
+    font-family: 'playwrite DE SAS', sans-serif;
+    color: var(--color-1)
+} .importante_1 img{
+    width: 60px;
+    height: 45px;
+    margin-right: 10px;
+    border-radius: 5%;
+} .navbar ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+} .navbar nav a{
+    color: var(--color-1);
+    text-decoration: none;
+    font-size: 13px;
+} .buton_header{
+    background-color: rgba(43, 80, 97, 0.425);
+    color: var(--color-2);
+    border-radius: 20px;
+    border:none;
+    padding: 3px 1px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 20px;
+    width: 130px;
+    height: 35px;
+    transition: background-color 3s ease, transform 2s;
+} .buton_header a{
+    text-decoration: none; 
+    font-family:'playwrite DE SAS', sans-serif;
+    font-weight: 200;
+    font-size: 17.5px;
+    color: var(--color-1);
+} .buton_header a:focus{
+    animation: blur-out-contract 0.2s linear both;
+} .buton_header:hover {
+    background-color: var(--color-8);
+    transition: 0.3s;
+} .soporte{
+    list-style: none;
+    display: flex;
+} .soporte i{
+    color: var(--color-1);
+    font-size: 22px;
+    margin-left: 7px;
+}
+/* contenido de la presentacion */
+.portada{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* el fondo de pantalla */
+    background: url('./assets_D/fondo_1.jpg') no-repeat center center/cover;
+} .overlay{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.747);
+    z-index: 1;
+} .contenido_portada{
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--color-1);
+} .titulos{
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    gap: 0.3rem;
+} .subtitulo{
+    font-size: 50px;
+    font-weight: 300;
+    font-family: 'playwrite DE SAS', sans-serif;
+    letter-spacing: 0.5px;
+    color: var(--color-1);
+    display: block;
+    gap: 2px;
+    margin-top: 200px;
+} .titulo{
+    margin: 0.4rem 0 0 0;
+    font-size: 48px;;
+    font-family: 'playwrite DE SAS', sans-serif;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}.escritura{
+    font-size: inherit;
+    font-family: 'playwrite DE SAS', sans-serif;
+    font-weight: 200;
+    white-space: nowrap;
+    overflow: hidden;
+    display:inline-block;
+    line-height: 1;
+} .cursor{
+    display: inline-block;
+    color: var(--color-1);
+    animation: blink 1s steps(1) infinite;
+    transform-origin: center;
+    margin-left: 6px;
+    vertical-align: middle;
+    font-weight: 200;
+    line-height: 1;
+} .content{
+    margin-top: 30px;
+} .comenzar{
+    background-color: rgba(43, 80, 97, 0.425);
+    color: var(--color-2);
+    border-radius: 60px;
+    border:none;
+    padding: 3px 1px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 20px;
+    width: 200px;
+    height: 50px;
+    transition: background-color 3s ease, transform 2s;
+} .comenzar a{
+    text-decoration: none; 
+    font-family:'playwrite DE SAS', sans-serif;
+    font-weight: 200;
+    font-size: 22px;
+    color: var(--color-1);
+} .comenzar a:focus{
+    animation: blur-out-contract 0.2s linear both;
+} .comenzar:hover {
+    background-color: var(--color-8);
+    transition: 0.3s;
+}.especificaciones {
+  background-color: rgba(0, 0, 0, 0.7);
+  display: inline-flex;
+  gap: 50px;
+  padding: 15px 40px;
+  border-radius: 50px;
+  margin-top: 40px;
+  font-size: 1rem;
+  font-family: 'playwrite DE SAS', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes blink{
+    0%, 50%{
+        opacity: 1;
+    }
+    51%, 100%{
+        opacity: 0;
+    }
+}
+@keyframes blur-out-contract{
+    0%{
+        transform: scale(1);
+        filter:blur(2px);
+    } 
+    100%{
+        transform: scale(0);
+        filter:blur(12px);
+        opacity:0;
+    }
+}
