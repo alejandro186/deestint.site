@@ -1,0 +1,78 @@
+:root {
+    --gold: #d4af37;
+    --dark: #1a1a1a;
+    --white: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: radial-gradient(circle, #2c3e50, #000000);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    z-index: 10;
+    width: 90%;
+    max-width: 600px;
+}
+
+.glow {
+    font-size: 3rem;
+    color: var(--gold);
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.7);
+    margin-bottom: 10px;
+}
+
+/* Carrusel */
+.carousel-container {
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    margin-top: 30px;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.carousel-item {
+    display: none;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    animation: fadeIn 0.8s ease;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.controls button {
+    background: none;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.controls button:hover {
+    background: var(--gold);
+    color: var(--dark);
+}
