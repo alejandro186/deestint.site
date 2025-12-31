@@ -24,7 +24,8 @@ body {
 }
 
 .glow {
-    font-size: 3rem;
+    font-size: 3.5rem;
+    margin-top: 40px;
     color: var(--gold);
     text-shadow: 0 0 15px rgba(212, 175, 55, 0.7);
     margin-bottom: 10px;
@@ -38,7 +39,7 @@ body {
     padding: 40px;
     border-radius: 20px;
     border: 1px solid rgba(212, 175, 55, 0.3);
-    margin-top: 30px;
+    margin-top: 300px;
     min-height: 150px;
     display: flex;
     flex-direction: column;
@@ -47,9 +48,9 @@ body {
 
 .carousel-item {
     display: none;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     line-height: 1.6;
-    animation: fadeIn 0.8s ease;
+    animation: fadeIn 2.1s ease;
 }
 
 .carousel-item.active {
