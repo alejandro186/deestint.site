@@ -1,9 +1,10 @@
 const messages = [
-    "Espero que disfrutes este nuevo año, con todo rl cariño y amor que mereces",
-    "No cuentes los días, haz que los días cuenten. Se que todo lo bueno te espera!",
-    "La magia del amor, es la magia que espero que abunde en todo lo que hagas.",
+    "Espero que disfrutes este nuevo año, con todo el cariño y amor que mereces",
+    "Te brindo mis mejores deseos para este año lleno de gratas sorpresas",
+    "Deseo que todos tus dias esten llenos de magia y de alegria, te deseo lo mejor",
     "Se que este año te espera grandes propósitos y grandes cambios!",
-    "espero que este 2026 sean 365 oportunidades para ser feliz y brillar."
+    "espero que este 2026 sean 365 oportunidades para ser feliz y brillar.",
+    "Te digo con todo cariño, FELIZ AÑO NUEVO!!"
 ];
 
 let currentIndex = 0;
