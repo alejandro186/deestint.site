@@ -18,8 +18,8 @@ body {
 }
 
 p{
-    font-size:20px;
-    margin-top: 14px;
+    font-size:15px;
+    margin-top: auto;
     align-items:center;
 }
 .container {
@@ -27,6 +27,7 @@ p{
     z-index: 10;
     width: 90%;
     max-width: 600px;
+    height: 300px;
 }
 
 .glow {
@@ -63,6 +64,13 @@ p{
 
 .carousel-item.active {
     display: block;
+}
+
+footer{
+    width: 90%;
+    max-width: 600px;
+    height: 50px;
+    margin-bottom: -10px;
 }
 
 @keyframes fadeIn {
