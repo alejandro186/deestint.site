@@ -4,6 +4,10 @@
     --white: #ffffff;
 }
 
+*{
+    font-size: 15px;
+}
+
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -24,7 +28,7 @@ body {
 }
 
 .glow {
-    font-size: 3rem;
+    font-size: 4rem;
     color: var(--gold);
     text-shadow: 0 0 15px rgba(212, 175, 55, 0.7);
     margin-bottom: 10px;
