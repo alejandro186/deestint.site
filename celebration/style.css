@@ -31,11 +31,11 @@ p{
 
 .glow {
     font-size: 3.7rem;
-    margin-top: 35px;
+    margin-top: 10px;
     margin-bottom: 20px;
     color: var(--gold);
     text-shadow: 0 0 15px rgba(212, 175, 55, 0.7);
-    margin-bottom: 10px;
+    margin-bottom: 25px;
 }
 
 /* Carrusel */
@@ -51,6 +51,7 @@ p{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 .carousel-item {
