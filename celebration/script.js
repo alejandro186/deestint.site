@@ -39,4 +39,4 @@ document.getElementById('prev').addEventListener('click', () => {
 setInterval(() => {
     currentIndex = (currentIndex + 1) % items.length;
     showMessage(currentIndex);
-}, 4500);
+}, 15000);
