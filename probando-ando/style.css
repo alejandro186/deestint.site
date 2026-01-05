@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+SAS:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -19,24 +19,34 @@
     --color-10: #c07c56;
     --color-11: #6F4E37;
     --color-12: #3B2F2F;
+    /* cuarta paleta */
+    --color-13: #E5E0D8;
+    --color-14: #B3B792;  
+    --color-15: #809671; 
+    --color-16: #488b48;
+    /* quinta paleta  */
+    --color-17: #0c2d3b;
+    --color-18: #145374;
+    --color-19: #8ba5ac;
+    --color-20: #062144;
 } body{
     height: 100vh;
     overflow:hidden;
-    background-color: var(--color-3);
+    background-color: var(--color-17);
 } header{
-    width: 100%;
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+    padding: 0 10px;
+    margin: 0 auto; 
+    max-width: 1200px;
 }.navbar{
     background:transparent;
     display:flex;
     justify-content:center;
     align-items: center;
     width: 100%;
+    height: 80px;
     position: absolute;
     top: 0;
-    z-index: 10;
+    z-index: 2;
 } .importante_1{
     font-weight: 700;
     width: 400px;
@@ -45,7 +55,7 @@
     font-size: 12px;
 } .importante_1 h1{
     font-weight: 300;
-    font-family: 'playwrite DE SAS', sans-serif;
+    font-family: 'science gothic';
     color: var(--color-1)
 } .importante_1 img{
     width: 60px;
@@ -74,7 +84,7 @@
     transition: background-color 3s ease, transform 2s;
 } .buton_header a{
     text-decoration: none; 
-    font-family:'playwrite DE SAS', sans-serif;
+    font-family: 'Science Gothic', sans-serif;
     font-weight: 200;
     font-size: 17.5px;
     color: var(--color-1);
@@ -94,51 +104,53 @@
 /* contenido de la presentacion */
 .portada{
     width: 100%;
-    height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto; 
+    height: 700px;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     /* el fondo de pantalla */
-    background: url('./assets_D/fondo_1.jpg') no-repeat center center/cover;
+    background:url('./assets_D/fondo_A_C.png') no-repeat center center/cover;
 } .overlay{
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.747);
+    background-color: rgba(0, 0, 0, 0.192);
     z-index: 1;
 } .contenido_portada{
     position: relative;
     z-index: 2;
     text-align: center;
-    color: var(--color-1);
+    color: var(--color-19);
 } .titulos{
     flex-direction: column;
     align-items: center;
     display: flex;
     gap: 0.3rem;
 } .subtitulo{
-    font-size: 50px;
-    font-weight: 300;
-    font-family: 'playwrite DE SAS', sans-serif;
+    font-size: 40px;
+    font-weight: 200;
+    font-family: 'science gothic', sans-serif;
     letter-spacing: 0.5px;
-    color: var(--color-1);
-    display: block;
+    color: var(--color-19);
+    display: inline-flex;
     gap: 2px;
-    margin-top: 200px;
+    margin-top: 50px;
 } .titulo{
     margin: 0.4rem 0 0 0;
-    font-size: 48px;;
-    font-family: 'playwrite DE SAS', sans-serif;
+    font-size: 38px;
+    font-family:  'Science Gothic', sans-serif;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 2px;
 }.escritura{
     font-size: inherit;
-    font-family: 'playwrite DE SAS', sans-serif;
+    font-family: 'Science Gothic', sans-serif;
     font-weight: 200;
     white-space: nowrap;
     overflow: hidden;
@@ -146,7 +158,7 @@
     line-height: 1;
 } .cursor{
     display: inline-block;
-    color: var(--color-1);
+    color: var(--color-19);
     animation: blink 1s steps(1) infinite;
     transform-origin: center;
     margin-left: 6px;
@@ -154,10 +166,9 @@
     font-weight: 200;
     line-height: 1;
 } .content{
-    margin-top: 30px;
+    margin-top: 70px;
 } .comenzar{
     background-color: rgba(43, 80, 97, 0.425);
-    color: var(--color-2);
     border-radius: 60px;
     border:none;
     padding: 3px 1px;
@@ -169,24 +180,35 @@
     transition: background-color 3s ease, transform 2s;
 } .comenzar a{
     text-decoration: none; 
-    font-family:'playwrite DE SAS', sans-serif;
-    font-weight: 200;
-    font-size: 22px;
-    color: var(--color-1);
+    font-family: 'Science Gothic', sans-serif;
+    font-weight: 300;
+    font-size: 25px;
+    color: var(--color-19);
 } .comenzar a:focus{
-    animation: blur-out-contract 0.2s linear both;
+    animation: blur-out-contract 0.4s linear both;
 } .comenzar:hover {
-    background-color: var(--color-8);
+    background-color: var(--color-20);
     transition: 0.3s;
 }.especificaciones {
-  background-color: rgba(0, 0, 0, 0.7);
-  display: inline-flex;
-  gap: 50px;
-  padding: 15px 40px;
+  background-color: rgba(20, 37, 44, 0.589);
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(4, 1fr);
   border-radius: 50px;
-  margin-top: 40px;
   font-size: 1rem;
-  font-family: 'playwrite DE SAS', sans-serif;
+  margin-top: 39px;
+  padding: 5px 15px 5px 15px; 
+  font-family:  'Science Gothic', sans-serif;
+}.especificaciones span {
+    background-color: rgba(21, 40, 48, 0.288);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 50px;
+    font-size: 16px;
+    width: 145px;
+}.especificaciones span:hover {
+    background-color: rgba(29, 66, 80, 0.356);
+    transition: 1s;
 }
 
 
@@ -204,7 +226,11 @@
 
 
 
-
+@media (max-width: 600px){
+    .especificaciones {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
 @keyframes blink{
     0%, 50%{
         opacity: 1;
