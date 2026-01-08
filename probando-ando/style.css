@@ -228,7 +228,19 @@
 
 @media (max-width: 600px){
     .especificaciones {
-        grid-template-columns: repeat(2, 1fr); 
+        grid-template-columns: repeat(1, 1fr); 
+        align-items: center;
+        justify-content: center;
+        width: 230px;
+        margin-left: 50px;
+    }
+    .especificaciones span {
+        width: 100px;
+        align-items: center;
+        margin-left: 50px;
+    }
+    .subtitulo{
+        margin-top: 250px;
     }
 }
 @keyframes blink{
