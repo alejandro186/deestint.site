@@ -83,7 +83,7 @@
     width: 100%;
     max-width: 1800px;
     margin: 0 auto; 
-    height: 1300px;
+    height: 1400px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -111,10 +111,11 @@
     align-items: center;
     display: flex;
     gap: 0.3rem;
-    margin-top: -200px;
+    margin-top: 100px;
+    animation: subir_entrada 1s ease-out forwards;
 } .subtitulo{
-    font-size: 45px;
-    font-weight: 250;
+    font-size: 47px;
+    font-weight: 300;
     font-family: 'science gothic', sans-serif;
     letter-spacing: 0.5px;
     color: var(--color-19);
@@ -155,12 +156,14 @@
     width: 250px;
     height: 50px;
     transition: background-color 3s ease, transform 2s;
+    animation: subir_entrada 1s ease-out forwards;
 } .comenzar a{
     text-decoration: none; 
     font-family: 'Science Gothic', sans-serif;
     font-weight: 300;
     font-size: 29px;
     color: var(--color-19);
+    animation: subir_entrada 1s ease-out forwards;
 } .comenzar a:focus{
     animation: blur-out-contract 0.4s linear both;
 } .comenzar:hover {
@@ -182,24 +185,35 @@
     margin: 0 40px;
     display: flex;
     align-items: center;
+    animation: subir_entrada 1s ease-out forwards;
 } .especificaciones i{
     font-size: 45px;
     padding-right: 40px;
     padding-left: 25px;
+    animation: subir_entrada 1s ease-out forwards;
 }.especificaciones .freatures{
     display: flex;
     align-items:center;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
+    width: 100%;
+    animation: subir_entrada 1s ease-out forwards;
 } .especificaciones span{
     font-size: 27px;
     font-weight: 400;
     flex-direction: center;
+    text-align: center
 } .especificaciones h1{
     font-size: 17px;
     font-weight: 200;
     margin-top: 2px;
-    margin-left: 10px;
+    text-align: center;
+}.especificaciones a:focus {
+    animation: blur-out-contract 0.4s linear both;
+}.especificaciones a:hover {
+    background-color: var(--color-20);
+    transition: 0.3s;
 }
 
 
@@ -235,5 +249,15 @@
         transform: scale(0);
         filter:blur(12px);
         opacity:0;
+    }
+}
+@keyframes subir_entrada{
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
