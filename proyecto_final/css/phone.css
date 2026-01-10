@@ -92,7 +92,7 @@
     align-items: center;
     overflow: visible;
     /* el fondo de pantalla */
-    background:url('../imagenes_final_proyect/fondo_A_O.png');
+    background:url('../imagenes_final_proyect/fondo_A_C.png');
     background-repeat: repeat;
 } .overlay{
     position: absolute;
