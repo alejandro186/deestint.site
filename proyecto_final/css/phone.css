@@ -113,7 +113,7 @@
     gap: 0.3rem;
     margin-top: -200px;
 } .subtitulo{
-    font-size: 40px;
+    font-size: 45px;
     font-weight: 250;
     font-family: 'science gothic', sans-serif;
     letter-spacing: 0.5px;
@@ -122,7 +122,7 @@
     gap: 2px;
 } .titulo{
     margin: 0.4rem 0 0 0;
-    font-size: 38px;
+    font-size: 40px;
     font-family:  'Science Gothic', sans-serif;
     display: inline-flex;
     gap: 2px;
@@ -150,17 +150,16 @@
     background-color: rgba(43, 80, 97, 0.24);
     border-radius: 60px;
     border:none;
-    padding: 3px 1px;
     cursor: pointer;
     display: inline-block;
-    width: 200px;
+    width: 250px;
     height: 50px;
     transition: background-color 3s ease, transform 2s;
 } .comenzar a{
     text-decoration: none; 
     font-family: 'Science Gothic', sans-serif;
     font-weight: 300;
-    font-size: 25px;
+    font-size: 29px;
     color: var(--color-19);
 } .comenzar a:focus{
     animation: blur-out-contract 0.4s linear both;
@@ -178,11 +177,29 @@
     font-weight: 300;
     color: var(--color-19);
     background-color: rgba(43, 80, 97, 0.178);
-    border-radius: 10px;
+    border-radius: 15px;
+    padding: 20px 5px 20px 5px; 
     margin: 0 40px;
+    display: flex;
+    align-items: center;
 } .especificaciones i{
-    font-size: 25px;
-    padding-right: 10px;
+    font-size: 45px;
+    padding-right: 40px;
+    padding-left: 25px;
+}.especificaciones .freatures{
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    justify-content: center;
+} .especificaciones span{
+    font-size: 27px;
+    font-weight: 400;
+    flex-direction: center;
+} .especificaciones h1{
+    font-size: 17px;
+    font-weight: 200;
+    margin-top: 2px;
+    margin-left: 10px;
 }
 
 
