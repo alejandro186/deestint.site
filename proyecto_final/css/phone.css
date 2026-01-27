@@ -29,6 +29,8 @@
     --color-18: #145374;
     --color-19: #8ba5ac;
     --color-20: #062144;
+    /* colores secundarios para uso externo */
+    --color-secundario: radial-gradient(circle,rgba(29, 76, 112, 0.493) 0%, rgba(48, 75, 114, 0.459) 15%, rgba(30, 40, 82, 0.5) 55%, rgba(11, 27, 51, 0.527) 97%);
 } body{
     min-height: 100vh;
     overflow: auto;
@@ -85,21 +87,23 @@
     max-width: 1800px;
     margin: 0 auto; 
     height: auto;
-    min-height: 1100px;
+    min-height: auto;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: visible;
+    padding-bottom: 100px;
     /* el fondo de pantalla */
     background:url('../imagenes_final_proyect/fondo_A_C.png');
-    background-repeat: repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
 } .overlay{
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.103);
+    background-color: rgba(0, 0, 0, 0.356);
     z-index: 1;
     pointer-events: none;
 } .contenido_portada{
@@ -115,8 +119,11 @@
     display: flex;
     gap: 0.3rem;
     margin-top: 200px;
+    opacity: 0;
+} .titulos.animate{
     animation: subir_entrada 2.5s ease-out forwards;
-} .subtitulo{
+    opacity: 1;
+}.subtitulo{
     font-size: 47px;
     font-weight: 300;
     font-family: 'science gothic', sans-serif;
@@ -159,19 +166,18 @@
     width: 250px;
     height: 50px;
     transition: background-color 3s ease, transform 2s;
+    opacity: 0;
+} .comenzar.animate{
     animation: subir_entrada 2.5s ease-out forwards;
+    opacity: 1;
 } .comenzar a{
     text-decoration: none; 
     font-family: 'Science Gothic', sans-serif;
     font-weight: 300;
     font-size: 29px;
     color: var(--color-19);
-    animation: subir_entrada 2.5s ease-out forwards;
 } .comenzar a:focus{
     animation: blur-out-contract 0.4s linear both;
-} .comenzar:hover {
-    background-color: var(--color-20);
-    transition: 0.3s;
 }.especificaciones {
     margin-top: 100px;
     display: grid;
@@ -188,12 +194,14 @@
     margin: 0 25px;
     display: flex;
     align-items: center;
+    opacity: 0;
+} .especificaciones a.animate{
     animation: subir_entrada 2.5s ease-out forwards;
-} .especificaciones i{
+    opacity: 1;
+}.especificaciones i{
     font-size: 45px;
     padding-right: 40px;
     padding-left: 45px;
-    animation: subir_entrada 2.5s ease-out forwards;
 }.especificaciones .freatures{
     display: flex;
     align-items:center;
@@ -201,7 +209,6 @@
     justify-content: center;
     text-align: center;
     width: 100%;
-    animation: subir_entrada 2.5s ease-out forwards;
 } .especificaciones span{
     font-size: 27px;
     font-weight: 400;
@@ -214,14 +221,289 @@
     text-align: center;
 }.especificaciones a:focus {
     animation: blur-out-contract 0.4s linear both;
-}.especificaciones a:hover {
-    background-color: var(--color-20);
-    transition: 0.3s;
+} .seccion_difuminada{
+    /* segundo background difuminado */
+    background: url(../imagenes_final_proyect/fondo_A_D.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* demas codigo */
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto; 
+    height: auto;
+    min-height: 1100px;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    overflow: visible;
+    padding-top: 0;
+    flex-direction: column;
+    align-items: center;
+} .seccion_difuminada_2{
+    z-index: 2;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+}.overlay_2{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.308);
+    z-index: 1;
+    pointer-events: none;
+} .boton_productos {
+    margin-top: -45px;
+    background-color: rgba(43, 80, 97, 0.521);
+    padding: 20px 10px; 
+    border-radius: 200px;
+    text-decoration: none;
+    font-family: 'Science Gothic', sans-serif;
+    font-weight: 400;
+    color: var(--color-19);
+    font-size: 20px;
+    opacity: 0;
+} .boton_productos.animate{
+    animation: subir_entrada 2.5s ease-out forwards;
+    opacity:1;
+} .boton_productos:focus{
+    animation: blur-out-contract 0.4s linear both;
+}  .productos_semanales {
+    display:grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 59px;
+} .productos_R{
+    z-index: 2;
+    position: relative;
+    width: auto;
+    min-width: 450px;
+    display: flex;
+    padding: 20px 10px;
+    background-color:  rgba(43, 80, 97, 0.438);
+    border-radius: 15px;
+    height: 200px;
+    justify-content: flex-start;
+    align-items: center;
+    opacity: 0;
+} .productos_R:after{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 70%;
+    background: radial-gradient(circle, rgba(64, 121, 139, 0.151) 0%, rgba(32, 91, 109, 0.329) 19%, rgba(43, 80, 97, 0.014) 100%);
+    border-radius: 10px;
+    left: 30%;
+}.productos_R.animate{
+    animation: entrada_ladeada 2.5s ease-out forwards;
+    opacity:1;
+} .productos_R img{
+    width: 100px;
+    height: 150px;
+    border-radius: 10px;
+    margin-left: 15px;
+    border:none;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.733);
+} .overlay_3{
+    position: absolute;
+    inset: 0;
+    width: 100px;
+    height: 150px;
+    margin-left: 25px;
+    margin-top: 25px;
+    background-color: rgba(37, 37, 37, 0.253);
+    z-index: 2;
+    pointer-events: none;
+    border-radius: 10px;
+} .container_texto{
+    display: flex;
+    left: 25px;
+    position:absolute;
+    flex-direction: column;
+    justify-content: center;
+} .textos-presentacion_producto{
+    padding-left: 0px;
+    text-align: center;
+    margin-left: 152px;
+    margin-top: 10px;
+    z-index: 3;
+} .texto_producto{
+    font-family: 'Science Gothic', sans-serif;
+    font-weight: 400;
+    color: var(--color-19);
+    font-size: 22px;
+} .marca{
+    font-size: 17px;
+    font-weight: 250;
+    margin-top: -5px;
+    color: var(--color-19);
+    font-family: 'science gothic', sans-serif;
+} .sub_texto_producto{
+    font-size: 15px;
+    font-weight: 200;
+    margin-top: 17px;
+    color: var(--color-19);
+    align-items: center;
+    display: block;
+    justify-content: center;
+    font-family: 'science gothic', sans-serif;
+    flex-direction: column;
+    margin-left: 130px;
+} .precio_producto{
+    display: flex;
+    font-size: 22px;
+    font-weight: 300;
+    margin-top: 15px;
+    color: var(--color-19);
+    font-family: 'science gothic', sans-serif;
+    text-align: center;
+    margin-left: 230px;
+} .information_product{
+    margin-left: 365px;
+    margin-top: -38px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+} .information_product i{
+    font-size: 35px;
+    color: var(--color-19);
+} /* modal de informacion del producto */
+  /* so important */
+  /* brooo, that is the hell */
+  /* help */
+  /* 😭 */
+.pop_up{
+    position: fixed;
+    top: 50%;   
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 460px;
+    height: 580px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.897);
+    background: url('../imagenes_final_proyect/fondo_A_O.png');
+} .pop_up.visible{
+    display: flex;
+    animation: pop_entrada 0.5s ease-out forwards;
+} .overlay_4{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 101;
+    width: 100%;
+    height: 100%; 
+    pointer-events: none;
+    border-radius: 15px;
+} .modal_contenido{
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 90%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    z-index: 102;
+} .cerrar{
+    cursor: pointer;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: none; 
+    top: -10px;
+    right: -20px;
+    font-size: 35px;
+    color: var(--color-19);
+    background: none;
+    transition: transform 0.3s ease;
+    order: 1;
+} .encabezado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 0;
+    position: relative;
+} .m_titulo{
+    font-family: 'Science Gothic', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    color: var(--color-19);
+    text-align: center;
+    order: 2;
+} .m_marca{
+    font-family: 'Science Gothic', sans-serif;
+    font-weight: 250;
+    font-size: 20px;
+    color: var(--color-19);
+    margin-top: -5px;
+    text-align: center;
+    margin-bottom: 30px;
+    order: 3;
+} .m_imagen{
+    width: 180px;
+    height: 230px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    margin-top: 0;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.897);
+    position: relative;
+    order: 4;
+} .m_descripcion{
+    margin-top: 10px;
+    order: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+} .m_descripcion p{
+    font-size: 16px;
+    font-family: 'Science Gothic', sans-serif;
+    color: var(--color-19);
+    text-align: center;
+} .especificaciones_importantes{
+    order: 6;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 90px;
+    margin-top: 35px;
+} .m_precio{
+    font-family: 'Science Gothic', sans-serif;
+    font-weight: 300;
+    font-size: 25px;
+    color: var(--color-19);
+    text-align: center;
+} .more_information, .boton_compra{
+    font-family: 'Science Gothic', sans-serif;
+    font-weight: 200;
+    font-size: 30px;
+    color: var(--color-19);
+    text-align: center;
+    background: none;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+} .more_information, .boton-compra:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
 }
-
-
-
-
 
 
 
@@ -264,3 +546,24 @@
         transform: translateY(0);
     }
 }
+@keyframes entrada_ladeada{
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes pop_entrada{
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
