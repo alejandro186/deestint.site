@@ -7,6 +7,7 @@ const overlay_4 = document.querySelector('.overlay_4');
 botones.forEach(boton => {
   boton.addEventListener("click", function(){
     const nombre = this.dataset.nombre;
+    const whatsapp = this.dataset.whatsapp;
     const descripcion_1 = this.dataset.descripcion1;
     const descripcion_2 = this.dataset.descripcion2;
     const precio = this.dataset.precio;
@@ -42,7 +43,7 @@ botones.forEach(boton => {
             return;
         } else{
         const telefono = "573185168373";
-        let mensaje = `hola, requiero soporte para este producto: ${nombre}`;
+        let mensaje = `hola, requiero soporte para este producto: ${whatsapp}`;
         const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
 
         window.open(url, '_blank');
