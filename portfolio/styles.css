@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background: #000000;
+    color: rgba(255, 255, 255, 0.74);
+    overflow: hidden;
+}
+#matrix{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.hero{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 8%;
+}
+.logo{
+    color: #00ff66;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    font-family: "Bebas Neue", sans-serif;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+nav a{
+    color: white;
+    font-family: "Science Gothic", sans-serif;
+    text-decoration: none;
+    transition: 0.3s;
+}
+nav div{
+    border: 2px solid #9496957c;
+    background-color: #94969521;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+nav div:hover{
+    border-color: #00ff66;
+}
+nav a:hover{
+    color: #00ff66;
+}
+.contenido{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 8%;
+    max-width: 700px;
+    font-family: "Science Gothic", sans-serif;
+}
+
+.contenido p:first-child{
+    color: #00ff66;
+    margin-bottom: 15px;
+    font-family: inherit;
+}
+
+.contenido h1{
+    font-size: 4rem;
+    margin-bottom: 10px;
+    font-family: inherit; 
+}
+
+.contenido h2{
+    color: #00ff66;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    font-family: inherit;
+}
+.descripcion{
+    color: #cfcfcf;
+    line-height: 1.8;
+    font-family: inherit;
+    margin-bottom: 30px;
+}
+
+a.btn {
+    width: fit-content;
+
+    padding: 15px 30px;
+
+    background: transparent;
+    border: 2px solid #00ff66;
+
+    color: #00ff66;
+
+    font-size: 1rem;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+a.btn:hover{
+    background: #00ff66;
+    color: black;
+}
+
+@media(max-width: 768px){
+
+    nav{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .contenido h1{
+        font-size: 2.8rem;
+    }
+
+}
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.science-gothic-100 {
+  font-family: "Science Gothic", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
