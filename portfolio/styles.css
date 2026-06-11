@@ -92,23 +92,21 @@ nav a:hover{
 
 a.btn {
     width: fit-content;
-
+    border-radius: 17px;
     padding: 15px 30px;
-
     background: transparent;
-    border: 2px solid #00ff66;
-
+    border: 2px solid #2bff0060;
     color: #00ff66;
-
     font-size: 1rem;
     cursor: pointer;
-
     transition: 0.3s;
+    text-decoration: none;
+    font-family: inherit;
 }
 
 a.btn:hover{
-    background: #00ff66;
-    color: black;
+    background: #00ff6631;
+    color: rgb(240, 239, 239);
 }
 
 @media(max-width: 768px){
