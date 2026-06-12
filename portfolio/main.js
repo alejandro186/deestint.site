@@ -7,19 +7,30 @@ const caracteres =
 const letras = caracteres.split("");
 
 const fontSize = 16;
-const columnas = canvas.width / fontSize;
 const gotas = [];
 
-for(let i = 0; i < columnas; i++){
-    gotas[i] = 1;
+function ajustarCanvas(){
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const columnas = Math.floor(canvas.width / fontSize);
+    gotas.length = columnas;
+
+    for(let i = 0; i < columnas; i++){
+        if(gotas[i] === undefined){
+            gotas[i] = 1;
+        }
+    }
 }
+
+ajustarCanvas();
 
 function dibujar(){
 
     ctx.fillStyle = "rgba(3, 3, 3, 0.05)";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    ctx.fillStyle = "#00ff0d3b";
+    ctx.fillStyle = "#002fff2d";
     ctx.font = fontSize + "px monospace";
     for(let i = 0; i < gotas.length; i++){
         const texto =
@@ -41,6 +52,5 @@ function dibujar(){
 setInterval(dibujar, 53);
 
 window.addEventListener("resize", () => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    ajustarCanvas();
 });
