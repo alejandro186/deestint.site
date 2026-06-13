@@ -7,20 +7,22 @@
 body{
     background: #000000;
     color: rgba(255, 255, 255, 0.74);
-    overflow: hidden;
+    overflow-x: hidden;
 }
 #matrix{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+    position: absolute;
+    width: 100%;
+    height: 100%;
     z-index: -1;
+    inset: 0;
 }
 .hero{
-    min-height: 70vh;
+    min-height: 100vh;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
+    position: relative;
+
 }
 nav{
     display: flex;
@@ -30,7 +32,7 @@ nav{
 }
 .logo{
     color: #0084ff62;
-    font-size: 2.7rem;
+    font-size: 3rem;
     letter-spacing: 3px;
     font-family: "Bebas Neue", sans-serif;
 }
@@ -110,7 +112,197 @@ a.btn:hover{
     background: #002fff2d;
     color: rgb(240, 239, 239);
 }
+ /* mecanica de la animacion tipo glitch */
+ .glitch{
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+ }
 
+ .glitch::before, .glitch::after{
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+ }
+ .glitch::before{
+    color: #053e6dd5;
+    z-index: -1;
+ }
+ .glitch::after{
+    color: #fff;
+    z-index: -2;
+ }
+
+ .glitch.active::before, .glitch.active::after{
+    animation: glitch 2s;
+ }
+
+/* segunda seccion */
+
+.of_me::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(0, 132, 255, 0.856),
+            transparent
+        );
+    margin-top: -100px;
+    margin-bottom: 100px;
+}
+
+.of_me{
+    padding: 50px 8%;
+    background: linear-gradient(
+            180deg,
+            #000000 0%,
+            #07101f 30%,
+            #0b1224 60%,
+            #101827 100%
+        );
+}
+
+.section-title{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h1{
+    font-size: 3rem;
+    color: white;
+}
+
+.section-title p{
+    color: #8d8d8d;
+}
+
+.info-grid{
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 30px;
+}
+
+.info-card{
+    background: rgba(255,255,255,.03);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 20px;
+    padding: 30px;
+    transition: .3s;
+}
+
+.info-card:hover{
+    transform: translateY(-10px);
+    border-color: rgba(0,132,255,.5);
+}
+
+.certificados{
+    padding: 50px 8%;
+    background: linear-gradient(
+        180deg,
+        #101827 0%,
+        #161d29 40%,
+        #0f192b 75%,
+        #081124 90%,
+        #010813 100%
+    );
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,.08);
+}
+.certificados-grid{
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+.certificado{
+    background: #111;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.08);
+    transition: .3s;
+}
+
+.certificado:hover{
+    transform: scale(1.03);
+    border-color: rgba(0,132,255,.5);
+}
+
+.certificado img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    background: #111;
+}
+
+footer{
+
+    background: transparent;
+    border-top: 1px solid rgba(255,255,255,.08);
+    padding: 40px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+footer h2{
+
+    color: #0084ff;
+
+    font-family: "Bebas Neue", sans-serif;
+
+    letter-spacing: 2px;
+}
+
+footer p{
+
+    color: #9ca3af;
+
+    font-size: .95rem;
+}
+
+
+ @keyframes glitch{
+    0% {
+        transform: translate(0);
+        opacity: 0;
+    }
+    20%{
+        transform: translate(-4px, 2px);
+        opacity: 1;
+    }
+    40%{
+        transform: translate(4px, -2px);
+    }
+    60%{
+        transform: translate(-2px, 1px);
+    }
+    80%{
+        transform: translate(2px, -1px);
+    }
+    100%{
+        transform: translate(0);
+        opacity: 0;
+    }
+ }
 @media(max-width: 768px){
 
     nav{
