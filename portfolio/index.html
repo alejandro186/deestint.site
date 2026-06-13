@@ -10,28 +10,112 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <canvas id="matrix"></canvas>
-    <main class="hero">
-
+    <main class="hero" id="start">
+        <canvas id="matrix"></canvas>
         <nav>
+
             <h2 class="logo">Deestint</h2>
 
             <ul>
-                <div><li><a href="#">start</a></li></div>
-                <div><li><a href="#">about me</a></li></div>
-                <div><li><a href="#">projects</a></li></div>
+                <div class="glitch" data-text="start"><li><a href="#start">start</a></li></div>
+                <div class="glitch" data-text="about me"><li><a href="#about_me">about me</a></li></div>
+                <div class="glitch" data-text="projects"><li><a href="#certificados">certificates</a></li></div>
             </ul>
         </nav>
         <section class="contenido">
-            <p>Hello, my name is</p>
-            <h1>Alejandro Díaz</h1>
-            <h2>Gestion Tech // Desarrollo Web</h2>
-            <a href="#" class="btn"> see more </a>
-
+                <p class="glitch" data-text="Hello, my name is">Hello, my name is</p>
+                <h1 class="glitch" data-text="Alejandro Díaz">Alejandro Díaz</h1>
+                <h2 class="glitch" data-text="Gestion Tech // Desarrollo Web">Gestion Tech // Desarrollo Web</h2>
+                <a href="#" class="btn"> see more </a>
         </section>
-
     </main>
 
-    <script src="main.js"></script>
+    <!-- apartado de segunda seccion -->
+    <section class="of_me" id="about_me">
+    <div class="section-title">
+        <h1>About Me</h1>
+        <p>Know more about myself.</p>
+    </div>
+
+    <div class="info-grid">
+
+        <div class="info-card">
+            <h2>who i am?</h2>
+            <p>
+                i´m  a student of software development, with a passion for programming and technology.
+                I am always eager to learn new skills and take on new challenges.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h2>Skills</h2>
+            <p>
+                -project management and monitoring. <br>
+                -web development with HTML, CSS and JavaScript.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h2>Education</h2>
+            <p>
+                Formation oriented towards software development.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h2>Interests</h2>
+            <p>
+                Artificial intelligence, video games and web design.
+            </p>
+        </div>
+
+    </div>
+
+    </section>
+
+    <section class="certificados">
+
+    <div class="section-title" id="certificados">
+        <h1>Certificates</h1>
+        <p>Some certificates obtained.</p>
+    </div>
+
+    <div class="certificados-grid">
+
+        <div class="certificado">
+            <img src="./certificates/imagen_1.jpg" alt="certificados"></img>
+        </div>
+        <div class="certificado">
+            <img src="./certificates/imagen_2.jpg" alt="certificados"></img>
+        </div>
+        <div class="certificado">
+            <img src="./certificates/imagen_3.jpg" alt="certificados"></img>
+        </div>
+
+        <div class="certificado">
+            <img src="./certificates/imagen_4.jpg" alt="certificados"></img>
+        </div>
+        <div class="certificado">
+            <img src="./certificates/imagen_5.jpg" alt="certificados"></img>
+        </div>
+        <div class="certificado">
+            <img src="./certificates/imagen_6.jpg" alt="certificados"></img>
+        </div>
+
+    </div>
+
+</section>
+<footer>
+
+    <h2>Deestint</h2>
+
+    <p>
+        © 2026 Alejandro Díaz.
+        All rights reserved.
+    </p>
+
+</footer>
+<script src="main.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
